@@ -1,4 +1,5 @@
 import app from 'firebase/app';
+import 'firebase/firestore';
 
 const config = {
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
@@ -9,12 +10,10 @@ const config = {
   messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 
-
 class Firebase {
   constructor() {
     app.initializeApp(config);
+    this.db = app.firestore();
   }
 }
-//TODO: authentication in Firebase console to connect to FIREBASE Class: https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial
-
 export default Firebase;
