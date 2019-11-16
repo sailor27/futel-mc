@@ -7,15 +7,27 @@ import  { FirebaseContext } from './Firebase';
 class App extends Component{
 constructor(){
     super();
-    this.state = {color:[Math.random()*255, Math.random()*255, Math.random()*255]};
-    this.randomColor = this.randomColor.bind(this);
+    this.state = {
+      isRecording: false,
+      recordingReady: false,
+      sound: null
+    }
     this.deleteUser = this.deleteUser.bind(this);
+    this.toggleRecording = this.toggleRecording.bind(this);
+    this.handleRecordingReady = this.handleRecordingReady.bind(this);
   }
 
-  randomColor(){
-    this.setState({color:[Math.random()*255, Math.random()*255, Math.random()*255]}
-    )
+  toggleRecording() {
+    this.setState({isRecording: !this.state.isRecording})
   }
+
+  handleRecordingReady(recording) {
+    if (recording) this.setState({
+      recordingReady: true,
+      sound: recording
+    });
+  }
+
 
   deleteUser(fb){
     fb.db.collection('users').doc('NLi76ZESLb5ZVcUfqflw')
@@ -25,14 +37,20 @@ constructor(){
   }
 
   render() {
+    const {isRecording, recordingReady} = this.state;
     return(
       <FirebaseContext.Consumer>
         {firebase => {
           // this.deleteUser(firebase);
           return (
             <>
-              <button onClick={this.randomColor}>Random Color</button>
-              <P5Wrapper sketch={mic}  ></P5Wrapper>
+              <button onClick={this.toggleRecording}>Record/Stop</button>
+              <P5Wrapper
+                sketch={mic}
+                handleRecordingReady={this.handleRecordingReady}
+                recordingReady={recordingReady}
+                isRecording={isRecording}
+              />
             </>
           )
           
