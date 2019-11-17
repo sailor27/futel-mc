@@ -3,37 +3,50 @@ import P5Wrapper from 'react-p5-wrapper';
 import {mic} from './p5';
 import  { FirebaseContext } from './Firebase';
 
-
 class App extends Component{
 constructor(){
     super();
     this.state = {
       isRecording: false,
-      recordingReady: false,
-      sound: null
+      recordingReady: false
     }
-    this.deleteUser = this.deleteUser.bind(this);
     this.toggleRecording = this.toggleRecording.bind(this);
-    this.handleRecordingReady = this.handleRecordingReady.bind(this);
+    this.saveSoundFileToState = this.saveSoundFileToState.bind(this);
+    this.saveRecording = this.saveRecording.bind(this);
   }
 
   toggleRecording() {
-    this.setState({isRecording: !this.state.isRecording})
-  }
-
-  handleRecordingReady(recording) {
-    if (recording) this.setState({
-      recordingReady: true,
-      sound: recording
+    this.setState({
+      isRecording: !this.state.isRecording,
     });
   }
 
+  saveRecording(fb) {
+    if (this.state.sound) {
+      const data = {
+        uid: new Date().getTime(),
+        sound: this.state.sound
+      }
+  
+        const storageRef = fb.storage.ref();
+        const testsRef = storageRef.child('tests');
+        const test = testsRef.child(`${data.uid.toString()}`);
+  
+        test.put(data.sound)
+        .then(() => {
+          console.log(`uploaded ${data.sound} to ${test}`);
+          this.setState({
+            sound: undefined
+          })
+      });
+    }
+  }
 
-  deleteUser(fb){
-    fb.db.collection('users').doc('NLi76ZESLb5ZVcUfqflw')
-      .delete()
-      .then(() => console.log('deleted'))
-      .catch((err) => console.log(err))
+  saveSoundFileToState(recording, callback) {
+    if (recording) this.setState({
+      recordingReady: true,
+      sound: recording
+    }, callback());
   }
 
   render() {
@@ -41,16 +54,19 @@ constructor(){
     return(
       <FirebaseContext.Consumer>
         {firebase => {
-          // this.deleteUser(firebase);
           return (
             <>
+
               <button onClick={this.toggleRecording}>Record/Stop</button>
+              <button onClick={() => this.saveRecording(firebase)}>Save</button>
+              {isRecording && <h1>RECORDING</h1>}
               <P5Wrapper
                 sketch={mic}
-                handleRecordingReady={this.handleRecordingReady}
                 recordingReady={recordingReady}
+                saveSoundFileToState={this.saveSoundFileToState}
                 isRecording={isRecording}
               />
+              
             </>
           )
           
