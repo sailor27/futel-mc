@@ -16,6 +16,15 @@ constructor(){
   }
 
   toggleRecording() {
+
+    // clear previous recording
+    if (this.state.sound) {
+      this.setState({
+        sound: undefined,
+        recordingReady: false
+      })
+    }
+
     this.setState({
       isRecording: !this.state.isRecording,
     });
@@ -35,18 +44,22 @@ constructor(){
         test.put(data.sound)
         .then(() => {
           console.log(`uploaded ${data.sound} to ${test}`);
-          this.setState({
-            sound: undefined
-          })
       });
     }
   }
 
-  saveSoundFileToState(recording, callback) {
-    if (recording) this.setState({
+  clearRecording() {
+     this.setState({
+      sound: undefined,
+      recordingReady: false
+    })
+  }
+
+  saveSoundFileToState(soundFile, clearP5File) {
+    if (soundFile) this.setState({
       recordingReady: true,
-      sound: recording
-    }, callback());
+      sound: soundFile
+    }, clearP5File());
   }
 
   render() {

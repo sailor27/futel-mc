@@ -33,9 +33,6 @@ export default function mic(p) {
       // record to p5.SoundFile
       soundFile = new p5module.SoundFile();
       recorder.record(soundFile);
-
-      p.background(255,0,0);
-      p.text('Recording!', 20, 20);
     }
 
 
