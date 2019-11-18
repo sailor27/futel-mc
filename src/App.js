@@ -70,7 +70,7 @@ constructor(){
           return (
             <>
 
-              <button onClick={this.toggleRecording}>Record/Stop</button>
+              <button onClick={this.toggleRecording}>{isRecording ? `Stop` : `Record`}</button>
               <button onClick={() => this.saveRecording(firebase)}>Save</button>
               {isRecording && <h1>RECORDING</h1>}
               <P5Wrapper

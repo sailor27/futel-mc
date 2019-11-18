@@ -27,9 +27,9 @@ export default function mic(p) {
   }
 
   function handleRecording(isRecording, saveSoundFileToState, recordingReady) {
-
     // make sure user enabled the mic
     if (isRecording && mic.enabled) {
+      p.background(70, 48, 235)
       // record to p5.SoundFile
       soundFile = new p5module.SoundFile();
       recorder.record(soundFile);
@@ -38,7 +38,7 @@ export default function mic(p) {
 
     if (!isRecording && !recordingReady) {
       p.getAudioContext().resume();
-      console.log('stop recording')
+      p.background(163, 161, 247)
       //setTimeout helps with buffer bug
       setTimeout(() => {
         recorder.stop();
