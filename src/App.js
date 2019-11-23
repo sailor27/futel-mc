@@ -1,7 +1,11 @@
-import React, {Component} from 'react';
+/** @jsx jsx */
+import {Component} from 'react';
 import P5Wrapper from 'react-p5-wrapper';
+import  {jsx} from '@emotion/core';
 import {mic} from './p5';
 import {FirebaseContext} from './Firebase';
+import Visualizer from './Visualizer';
+import Button from './Button';
 
 class App extends Component {
   constructor() {
@@ -70,11 +74,37 @@ class App extends Component {
       <FirebaseContext.Consumer>
         {firebase => {
           return (
-            <>
-              <button onClick={this.toggleRecording}>
-                {isRecording ? `Stop` : `Record`}
-              </button>
-              <button onClick={() => this.saveRecording(firebase)}>Save</button>
+            <div
+              css={{
+                height: `100vh`,
+                width: `100%`,
+                display: 'flex',
+                flexFlow: `column nowrap`,
+                alignItems: `center`,
+                paddingTop: 100,
+              }}
+            >
+              <Visualizer />
+              <div
+                css={{
+                  display: 'flex',
+                  flexFlow: `row nowrap`,
+                  justifyContent: `center`,
+                  // border: '2px dashed black',
+                  minWidth: 320,
+                }}
+              >
+                <Button
+                  clickHandler={this.toggleRecording}
+                  text={isRecording ? `Stop` : `Record`}
+                  color="#4630eb"
+                />
+                <Button
+                  clickHandler={() => this.saveRecording(firebase)}
+                  text="Save"
+                  color="#a3a1f7"
+                />
+              </div>
               {isRecording && <h1>RECORDING</h1>}
               <P5Wrapper
                 sketch={mic}
@@ -82,7 +112,7 @@ class App extends Component {
                 saveSoundFileToState={this.saveSoundFileToState}
                 isRecording={isRecording}
               />
-            </>
+            </div>
           );
         }}
       </FirebaseContext.Consumer>
@@ -91,3 +121,10 @@ class App extends Component {
 }
 
 export default App;
+
+
+//colors:
+//#4630eb - dark purple
+// #a3a1f7 - light purple
+// #00001f - black
+// #ffffff
