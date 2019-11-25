@@ -97,12 +97,14 @@ class App extends Component {
                 <Button
                   clickHandler={this.toggleRecording}
                   text={isRecording ? `Stop` : `Record`}
-                  color="#4630eb"
+                  backgroundColor={isRecording ? `#4630eb` : `#ffffff`}
+                  color={isRecording ? `#ffffff` : `#4630eb`}
                 />
                 <Button
                   clickHandler={() => this.saveRecording(firebase)}
                   text="Save"
-                  color="#a3a1f7"
+                  backgroundColor="#a3a1f7"
+                  color="white"
                 />
               </div>
               {isRecording && <h1>RECORDING</h1>}
