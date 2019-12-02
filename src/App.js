@@ -19,6 +19,13 @@ class App extends Component {
     this.saveRecording = this.saveRecording.bind(this);
   }
 
+  // componentDidMount(){
+  //    this.toggleRecording();
+  //   setTimeout(() => {
+  //     this.toggleRecording();
+  //   }, 1500);
+  // }
+
   toggleRecording() {
     // clear previous recording
     if (this.state.sound) {
@@ -85,6 +92,14 @@ class App extends Component {
               }}
             >
               <Visualizer />
+              {isRecording &&
+                <P5Wrapper
+                  sketch={mic}
+                  recordingReady={recordingReady}
+                  saveSoundFileToState={this.saveSoundFileToState}
+                  isRecording={isRecording}
+                />
+              }
               <div
                 css={{
                   display: 'flex',
@@ -108,12 +123,6 @@ class App extends Component {
                 />
               </div>
               {isRecording && <h1>RECORDING</h1>}
-              <P5Wrapper
-                sketch={mic}
-                recordingReady={recordingReady}
-                saveSoundFileToState={this.saveSoundFileToState}
-                isRecording={isRecording}
-              />
             </div>
           );
         }}

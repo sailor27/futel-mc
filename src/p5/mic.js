@@ -2,7 +2,7 @@ import * as p5module from 'p5/lib/p5';
 import 'p5/lib/addons/p5.sound';
 
 export default function mic(p) {
-  let mic, recorder, soundFile;
+  let mic, recorder, soundFile, micLevel;
 
   p.setup = () => {
     mic = new p5module.AudioIn();
@@ -14,11 +14,23 @@ export default function mic(p) {
 
     // connect the mic to the recorder
     recorder.setInput(mic);
-
-    // this sound file will be used to
-    // playback & save the recording
-    // soundFile = new p5module.SoundFile();
   };
+
+  p.draw = () => {
+    p.getAudioContext().resume();
+    console.log('mic.enabled', mic.enabled);
+    micLevel = mic.getLevel();
+
+
+    console.log(micLevel);
+    
+    if(micLevel) p.ellipse(
+      p.width / 2,
+      p.constrain(p.height - micLevel * p.height * 5, 0, p.height),
+      10,
+      10
+    );
+  }
 
   function resetSoundFile() {
     soundFile.play();
@@ -26,17 +38,20 @@ export default function mic(p) {
   }
 
   function handleRecording(isRecording, saveSoundFileToState, recordingReady) {
+
     // make sure user enabled the mic
     if (isRecording && mic.enabled) {
-      p.background(70, 48, 235);
+      p.background(70, 48, 235); // darker purple
       // record to p5.SoundFile
       soundFile = new p5module.SoundFile();
+      
       recorder.record(soundFile);
     }
 
     if (!isRecording && !recordingReady) {
       p.getAudioContext().resume();
-      p.background(163, 161, 247);
+      p.background(163, 161, 247); // lighter purple
+
       //setTimeout helps with buffer bug
       setTimeout(() => {
         recorder.stop();
