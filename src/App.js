@@ -92,14 +92,13 @@ class App extends Component {
               }}
             >
               <Visualizer />
-              {isRecording &&
-                <P5Wrapper
-                  sketch={mic}
-                  recordingReady={recordingReady}
-                  saveSoundFileToState={this.saveSoundFileToState}
-                  isRecording={isRecording}
-                />
-              }
+              <P5Wrapper
+                sketch={mic}
+                recordingReady={recordingReady}
+                saveSoundFileToState={this.saveSoundFileToState}
+                isRecording={isRecording}
+              />
+            
               <div
                 css={{
                   display: 'flex',

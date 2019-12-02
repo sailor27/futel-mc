@@ -6,23 +6,19 @@ export default function mic(p) {
 
   p.setup = () => {
     mic = new p5module.AudioIn();
+    recorder = new p5module.SoundRecorder();
+
     // prompts user to enable their browser mic
     mic.start();
 
-    // create a sound recorder
-    recorder = new p5module.SoundRecorder();
-
     // connect the mic to the recorder
     recorder.setInput(mic);
+     p.background(163, 161, 247);
   };
 
   p.draw = () => {
     p.getAudioContext().resume();
-    console.log('mic.enabled', mic.enabled);
     micLevel = mic.getLevel();
-
-
-    console.log(micLevel);
     
     if(micLevel) p.ellipse(
       p.width / 2,
