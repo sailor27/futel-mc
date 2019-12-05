@@ -8,8 +8,9 @@ export default function mic(p) {
   p.setup = () => {
     mic = new p5module.AudioIn();
     recorder = new p5module.SoundRecorder();
-    fft = new p5module.FFT(0.9, 128);
+    fft = new p5module.FFT(0.9, 32);
 
+    // create 256 x 256 p5 canvas
     p.createCanvas(256, 256);
 
     // prompts user to enable their browser mic

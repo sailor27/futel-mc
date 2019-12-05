@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {Component} from 'react';
+import {Component, useContext} from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 import  {jsx} from '@emotion/core';
 import {mic} from './p5';
