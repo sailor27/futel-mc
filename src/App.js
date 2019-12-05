@@ -4,7 +4,6 @@ import P5Wrapper from 'react-p5-wrapper';
 import  {jsx} from '@emotion/core';
 import {mic} from './p5';
 import {FirebaseContext} from './Firebase';
-import Visualizer from './Visualizer';
 import Button from './Button';
 
 class App extends Component {
@@ -19,12 +18,6 @@ class App extends Component {
     this.saveRecording = this.saveRecording.bind(this);
   }
 
-  // componentDidMount(){
-  //    this.toggleRecording();
-  //   setTimeout(() => {
-  //     this.toggleRecording();
-  //   }, 1500);
-  // }
 
   toggleRecording() {
     // clear previous recording
@@ -91,14 +84,13 @@ class App extends Component {
                 paddingTop: 100,
               }}
             >
-              <Visualizer />
               <P5Wrapper
                 sketch={mic}
                 recordingReady={recordingReady}
                 saveSoundFileToState={this.saveSoundFileToState}
                 isRecording={isRecording}
               />
-            
+
               <div
                 css={{
                   display: 'flex',
