@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import {Component, useContext} from 'react';
+import {Component} from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 import  {jsx} from '@emotion/core';
 import {mic} from './p5';
@@ -96,7 +96,6 @@ class App extends Component {
                   display: 'flex',
                   flexFlow: `row nowrap`,
                   justifyContent: `center`,
-                  // border: '2px dashed black',
                   minWidth: 320,
                 }}
               >

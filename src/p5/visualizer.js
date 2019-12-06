@@ -14,9 +14,9 @@ export default function visualizer(p, fft) {
         // let y = p.map(amp, 0, 256, p.height, 0);
         // p.rect(i * bandWidth, y, bandWidth, p.height - y)
 
-
+      // console.log(spectrum)
         let x = p.map(i, 0, spectrum.length, 0, p.width);
-        let h = p.map(amp, 0, 256, p.height, 0) - p.height ;
+        let h = p.map(amp, 0, 256, p.height, 0) - p.height;
         p.rect(x, p.height, bandWidth, h);
       }
     }
