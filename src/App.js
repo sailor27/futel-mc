@@ -6,7 +6,7 @@ import {jsx} from '@emotion/core';
 import {FirebaseContext} from './Firebase';
 import Button from './Button';
 
-function AppWithHooks() {
+function App() {
   const [ isRecording, setIsRecording ] = useState(false);
   const [soundFile, setSoundFile] = useState(undefined);
 
@@ -84,4 +84,4 @@ function AppWithHooks() {
   );
 };
 
-export default AppWithHooks;
+export default App;
