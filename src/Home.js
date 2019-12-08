@@ -43,12 +43,10 @@ function Home() {
       {firebase => (
         <div
           css={{
-            height: `100vh`,
-            width: `100%`,
+            border: `3px dashed green`,
             display: 'flex',
             flexFlow: `column nowrap`,
             alignItems: `center`,
-            paddingTop: 100,
           }}
         >
           <P5Wrapper

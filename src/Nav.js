@@ -1,20 +1,39 @@
 /** @jsx jsx */
 import {Link} from 'react-router-dom';
 import * as ROUTES from './constants/routes';
-import {jsx} from '@emotion/core';
+import {jsx, css} from '@emotion/core';
 
 function Nav() {
   return (
     <div
       css={{
-        height: `30px`,
-        width: `100%`,
-        display: 'flex',
-        flexFlow: `row nowrap`,
-        border: `2px dashed palevioletred`,
+        background: `pink`,
+        display: `grid`,
+        gridTemplateColumns: `1fr 1fr`,
+        // gridGap: `20px`
       }}
     >
-      <ul>
+      <div
+        css={{
+          border: `2px dashed black`,
+          background: `blue`,
+        }}
+      >
+        <p>FUTEL</p>
+        <p>missed connections</p>
+      </div>
+
+      <ul
+        css={css`
+          & li {
+            color: green
+          }
+          margin: 0,
+          border: 2px dashed black,
+          background: yellow,
+          display: flex
+        `}
+      >
         <li>
           <Link to={ROUTES.ABOUT}>About</Link>
         </li>
@@ -22,7 +41,7 @@ function Nav() {
           <Link to="/">Home</Link>
         </li>
       </ul>
-    </div>
+      </div>
   );
 }
 
