@@ -43,7 +43,7 @@ export default function mic(p) {
       recorder.record(soundFile);
     }
 
-    if (!isRecording && !recordingReady) {
+    if (!isRecording && !recordingReady && soundFile) {
       p.getAudioContext().resume();
       // p.background(163, 161, 247); // lighter purple
 
