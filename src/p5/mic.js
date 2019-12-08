@@ -32,7 +32,7 @@ export default function mic(p) {
     soundFile = new p5module.SoundFile();
   }
 
-  function handleRecording(isRecording, saveSoundFileToState, recordingReady) {
+  function handleRecording(isRecording, handleSoundFile, recordingReady) {
     // make sure user enabled the mic
     if (isRecording && mic.enabled) {
       // p.background(70, 48, 235); // darker purple
@@ -51,14 +51,15 @@ export default function mic(p) {
       setTimeout(() => {
         recorder.stop();
 
-        saveSoundFileToState(soundFile.getBlob(), resetSoundFile);
+        handleSoundFile(soundFile.getBlob(), resetSoundFile);
       }, 1500);
     }
   }
   p.myCustomRedrawAccordingToNewPropsHandler = newProps => {
-    const {isRecording, saveSoundFileToState, recordingReady} = newProps;
+    const {isRecording, handleSoundFile, recordingReady} = newProps;
+
     if (mic) {
-      handleRecording(isRecording, saveSoundFileToState, recordingReady);
+      handleRecording(isRecording, handleSoundFile, recordingReady);
     }
   };
 }
