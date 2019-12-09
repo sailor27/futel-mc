@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {useState} from 'react';
 import P5Wrapper from 'react-p5-wrapper';
+import {colors} from './constants/colors';
 import {mic} from './p5';
 import {jsx} from '@emotion/core';
 import {FirebaseContext} from './Firebase';
@@ -43,7 +44,6 @@ function Home() {
       {firebase => (
         <div
           css={{
-            border: `3px dashed green`,
             display: 'flex',
             flexFlow: `column nowrap`,
             alignItems: `center`,
@@ -66,13 +66,13 @@ function Home() {
             <Button
               clickHandler={toggleRecording}
               text={isRecording ? `Stop` : `Record`}
-              backgroundColor={isRecording ? `#4630eb` : `#ffffff`}
-              color={isRecording ? `#ffffff` : `#4630eb`}
+              backgroundColor={isRecording ? colors.darkPurple : `#ffffff`}
+              color={isRecording ? `#ffffff` : colors.darkPurple}
             />
             <Button
               clickHandler={() => saveToFirebase(firebase)}
               text="Save"
-              backgroundColor="#a3a1f7"
+              backgroundColor={colors.lightPurple}
               color="white"
             />
           </div>

@@ -1,6 +1,4 @@
 /** @jsx jsx */
-import React from 'react';
-// import Home from './Home';
 import {jsx} from '@emotion/core';
 import Nav from './Nav';
 import * as ROUTES from './constants/routes';
@@ -15,8 +13,8 @@ function App() {
         className="wrapper"
         css={{
           maxHeight: `100vh`,
-          margin: `0 auto`,
-          border: `3px solid purple`,
+          maxWidth: `100vw`,
+          margin: `0`,
           display: `grid`,
           gridTemplateRows: `1fr 9fr`,
         }}
@@ -24,7 +22,7 @@ function App() {
         <Nav />
         <Route exact path={ROUTES.ABOUT} component={About} />
         <Route exact path="/" component={Home} />
-
+        <Route exact path={ROUTES.HOW_TO} component={Home} />
       </div>
     </Router>
   );
