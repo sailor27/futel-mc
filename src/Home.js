@@ -46,7 +46,7 @@ function Home() {
           css={{
             display: 'flex',
             flexFlow: `column nowrap`,
-            alignItems: `center`,
+            alignItems: `center`
           }}
         >
           <P5Wrapper
