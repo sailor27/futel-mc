@@ -1,62 +1,63 @@
 /** @jsx jsx */
-import React from 'react';
-
 import {ABOUT_CONTENT} from './constants/content';
 import * as TreeImg from './img/wishing_tree.jpeg';
 import * as PhoneImg from './img/futel_phone_clinton.jpeg';
-
-// import Photo from './Photo';
 // import {colors} from './constants/colors';
 import {jsx, css} from '@emotion/core';
 
 function About() {
   return (
-    <div css={{ margin: `30px`, display: `flex`, flexFlow: 'column nowrap', alignItems: 'center'}}>
-      <h1>About</h1>
-      <div
-        css={css`{
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
-          justify-content: center;
-          align-items: center;
-          > img {
-              padding: 15px;
-              max-width: 375px;
-              justify-self: center;
+    <div
+      css={css`
+         {
+          margin: 30px;
+          display: flex;
+          flex-flow: column nowrap;
+          max-width: 100vw;
 
+          .row {
+            display: flex;
+            flex-flow: row nowrap;
+            @media (max-width: 768px) {
+              flex-flow: row wrap;
             }
-        @media (max-width: 420px) {
-            > img {
-              display: none;
-            }
+            margin-bottom: 30px;
           }
           .content {
-            padding: 15px;
-            border: 2px dashed;
+            font-size: 1.15em;
+            font-weight: bold;
+            flex-basis: 550px;
           }
-        }`}
-      >
+          .image {
+            @media (max-width: 420px) {
+              display: none;
+            }
+            > img {
+              max-width: 550px;
+              max-height: 550px;
+            }
+          }
+        }
+      `}
+    >
+      <h1>About Futel Missed Connections</h1>
+      <div className="row">
+        <div className="image" css={{marginRight: '30px'}}>
+          <img src={PhoneImg} alt="futel phone" />
+        </div>
 
-      <img
-        src={PhoneImg}
-        alt="futel phone"
-      />
-
-      <div className="content">
-        {ABOUT_CONTENT}
+        <div className="content">{ABOUT_CONTENT}</div>
       </div>
+      <div className="row" css={{flexFlow: ' row wrap'}}>
+        <div className="content" css={{marginRight: '30px'}}>
+          {ABOUT_CONTENT}
+        </div>
 
-      <div className="content">
-        {ABOUT_CONTENT}
+        <div className="image">
+          <img alt="wishing tree" src={TreeImg} />
+        </div>
       </div>
-
-      <img
-        alt="wishing tree"
-        src={TreeImg}
-      />
-
     </div>
-  </div>
   );
 }
 
