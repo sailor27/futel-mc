@@ -2,7 +2,6 @@
 import {ABOUT_CONTENT} from './constants/content';
 import * as TreeImg from './img/wishing_tree.jpeg';
 import * as PhoneImg from './img/futel_phone_clinton.jpeg';
-// import {colors} from './constants/colors';
 import {jsx, css} from '@emotion/core';
 
 function About() {
@@ -13,8 +12,9 @@ function About() {
           margin: 30px;
           display: flex;
           flex-flow: column nowrap;
-          max-width: 100vw;
-
+          max-width: 990px;
+          justify-self: center;
+          
           .row {
             display: flex;
             flex-flow: row nowrap;
@@ -48,7 +48,7 @@ function About() {
 
         <div className="content">{ABOUT_CONTENT}</div>
       </div>
-      <div className="row" css={{flexFlow: ' row wrap'}}>
+      <div className="row" css={{flexFlow: 'row wrap'}}>
         <div className="content" css={{marginRight: '30px'}}>
           {ABOUT_CONTENT}
         </div>
