@@ -4,7 +4,11 @@ body {
   font-family: -apple-system,'Roboto','Work Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #4630eb
+
+  /* typography */
+  letter-spacing: 0.075em;
+  font-size: 1.15em;
+  font-weight: bold;
 }
 
 code {

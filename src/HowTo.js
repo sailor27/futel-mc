@@ -5,7 +5,7 @@ import * as TreeImg from './img/wishing_tree.jpeg';
 import * as PhoneImg from './img/futel_phone_clinton.jpeg';
 import {jsx} from '@emotion/core';
 
-function About() {
+function HowTo() {
   return (
     <ContentPage
       title="About Futel Missed Connections"
@@ -19,4 +19,4 @@ function About() {
   );
 }
 
-export default About;
+export default HowTo;

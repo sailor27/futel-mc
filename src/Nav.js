@@ -17,9 +17,8 @@ function Nav() {
         > * {
           color: white;
         }
-        &:hover {
-          background-color: ${colors.lightPurple};
-          box-shadow: 1px 2px 2px rgba(0, 8, 23, 4.05);
+        @media (max-width: 420px) {
+          grid-template-columns: 2fr 1fr;
         }
       `}
     >
@@ -36,7 +35,8 @@ function Nav() {
           css={{
             margin: 0,
             fontFamily: `house-script`,
-            fontSize: `1.5em`,
+            fontSize: `1.25em`,
+            letterSpacing: `normal`,
           }}
         >
           missed connections
@@ -53,6 +53,7 @@ function Nav() {
           justify-content: space-around;
           @media (max-width: 420px) {
             flex-flow: column nowrap;
+            align-items: flex-start;
           }
           > li {
             a {
