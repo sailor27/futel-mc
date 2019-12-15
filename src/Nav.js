@@ -14,11 +14,13 @@ function Nav() {
         grid-template-columns: 1fr 4fr;
         box-shadow: 0px 0px 0px rgba(0, 1, 31, 0.05);
         padding: 20px;
+        @media (max-width: 420px) {
+          font-size: 1em;
+          line-height: 1.5em;
+          grid-template-columns: 2fr 1fr;
+        }
         > * {
           color: white;
-        }
-        @media (max-width: 420px) {
-          grid-template-columns: 2fr 1fr;
         }
       `}
     >
@@ -30,7 +32,10 @@ function Nav() {
           justifyContent: `center`,
         }}
       >
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
+
         <h3
           css={{
             margin: 0,
@@ -46,11 +51,12 @@ function Nav() {
       <ul
         css={css`
           display: flex;
-          margin: 0;
           padding: 0;
+          margin: 0;
           flex-flow: row nowrap;
           align-items: center;
           justify-content: space-around;
+
           @media (max-width: 420px) {
             flex-flow: column nowrap;
             align-items: flex-start;
@@ -59,6 +65,10 @@ function Nav() {
             a {
               text-decoration: none;
               color: white;
+              margin: 5px;
+              :hover {
+                color: ${colors.lighterPurple};
+              }
             }
           }
         `}
@@ -67,10 +77,10 @@ function Nav() {
           <Link to={ROUTES.ABOUT}>About</Link>
         </li>
         <li>
-          <Link to="/">Home</Link>
+          <Link to={ROUTES.HOW_TO}>How to</Link>
         </li>
         <li>
-          <Link to={ROUTES.HOW_TO}>How to</Link>
+          <Link to="/">Record</Link>
         </li>
       </ul>
     </div>

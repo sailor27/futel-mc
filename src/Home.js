@@ -26,7 +26,7 @@ function Home() {
     if (soundFile) {
       const data = {
         uid: new Date().getTime(),
-        soundFile,
+        soundFile
       };
 
       const storageRef = fb.storage.ref();
@@ -46,7 +46,7 @@ function Home() {
           css={{
             display: 'flex',
             flexFlow: `column nowrap`,
-            alignItems: `center`
+            alignItems: `center`,
           }}
         >
           <P5Wrapper
@@ -72,8 +72,8 @@ function Home() {
             <Button
               clickHandler={() => saveToFirebase(firebase)}
               text="Save"
-              backgroundColor={colors.lightPurple}
-              color="white"
+              color="#ffffff"
+              backgroundColor={colors.darkPurple}
             />
           </div>
         </div>

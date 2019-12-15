@@ -9,20 +9,26 @@ function Button({clickHandler, text, color, backgroundColor}) {
         css={css`
           height: 50px;
           width: 120px;
+
           border-radius: 5px;
           margin: 15px;
           border: 3px solid black;
+
           background-color: ${backgroundColor};
           font-size: 1.25em;
           font-weight: bold;
           text-transform: uppercase;
           color: ${color};
-          box-shadow: 0px 0px 0px rgba(0, 1, 31, 0.05);
+
           &:hover {
-            color:${backgroundColor};
+            color: ${backgroundColor};
+            border: 3px solid black;
             background-color: ${color};
-            border: 3px solid ${backgroundColor}
-            box-shadow: 1px 2px 2px rgba(0, 8, 23, 4.05);
+            box-shadow: 8px 8px black;
+          }
+
+          &:focus {
+            box-shadow: 8px 8px black;
           }
         `}
       >

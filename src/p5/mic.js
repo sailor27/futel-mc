@@ -45,7 +45,6 @@ export default function mic(p) {
 
     if (!isRecording && !recordingReady && soundFile) {
       p.getAudioContext().resume();
-      // p.background(163, 161, 247); // lighter purple
 
       //setTimeout helps with buffer bug
       setTimeout(() => {
@@ -57,7 +56,7 @@ export default function mic(p) {
   }
   p.myCustomRedrawAccordingToNewPropsHandler = newProps => {
     const {isRecording, handleSoundFile, recordingReady} = newProps;
-
+    console.log("new props", newProps)
     if (mic) {
       handleRecording(isRecording, handleSoundFile, recordingReady);
     }
