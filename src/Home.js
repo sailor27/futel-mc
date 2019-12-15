@@ -13,6 +13,7 @@ function Home() {
 
   function toggleRecording() {
     setIsRecording(!isRecording);
+    setSoundFile(undefined);
   }
 
   function handleSoundFile(soundFile, playAndResetP5) {
