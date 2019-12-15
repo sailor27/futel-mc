@@ -21,7 +21,6 @@ function ContentPage({title, img1, img2, alt1, alt2, content1, content2}) {
             margin-bottom: 30px;
           }
           .content {
-            
             flex-basis: 550px;
           }
           .image {
@@ -42,7 +41,14 @@ function ContentPage({title, img1, img2, alt1, alt2, content1, content2}) {
           <img src={img1} alt={alt1} />
         </div>
 
-        <div className="content">{content1}</div>
+        <div className="content">
+          <p>
+            Futel missed connections are a way to leave a message for someone
+            who will pick up the Futel phone on
+            <a href="https://g.page/opensignalpdx?share"> NE MLK & Grand</a> If
+            they hear your message, they can reply.
+          </p>
+        </div>
       </div>
       <div className="row" css={{flexFlow: 'row wrap'}}>
         <div className="content" css={{marginRight: '30px'}}>

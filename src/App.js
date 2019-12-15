@@ -5,6 +5,7 @@ import * as ROUTES from './constants/routes';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import About from './About';
 import Home from './Home';
+import HowTo from './HowTo';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Nav />
         <Route exact path={ROUTES.ABOUT} component={About} />
         <Route exact path="/" component={Home} />
-        <Route exact path={ROUTES.HOW_TO} component={Home} />
+        <Route exact path={ROUTES.HOW_TO} component={HowTo} />
       </div>
     </Router>
   );
