@@ -9,3 +9,7 @@ export const ABOUT_CONTENT = `
   neighborhood, revealing the dreams and observations of those who
   co-occupy the space, and creating an opportunity to connect.
 `;
+
+export const WHY_MC = `I'm interested in the way the Missed Connections format draws out desires, dreams, and imagined potentials from passerbys in the public space. Often centered in urban areas and around transit, Missed Connections expose the lack of connection felt by "strangers" in the public space and the reality that while we exist with others in space, for good reasons it is not always safe, practical, or possible to connect. 
+
+I see sites of recorded Missed Connections as a time and space superimposed on the city, which reveals fleeting senses of what could have been. In gathering these impressions of what-could-have been together, we can see a glimpse of a collective re-imagining of our local world.`;
