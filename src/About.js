@@ -2,6 +2,7 @@
 import {ABOUT_CONTENT} from './constants/content';
 import * as TreeImg from './img/wishing_tree.jpeg';
 import * as PhoneImg from './img/futel_phone_clinton.jpeg';
+import Svg from './Svg'
 import {jsx, css} from '@emotion/core';
 
 function About() {
@@ -113,7 +114,8 @@ function About() {
         </div>
 
         <div className="image">
-          <img alt="wishing tree" src={TreeImg} />
+          <Svg/>
+          {/* <img alt="wishing tree" src={TreeImg} /> */}
         </div>
       </div>
     </div>

@@ -2,7 +2,6 @@
 
 import {jsx} from '@emotion/core';
 import * as LogoImg from './img/transparent-white-futel.png';
-
 const img = LogoImg;
 
 function Logo() {
