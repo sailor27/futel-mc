@@ -7,7 +7,7 @@ body {
 
   /* typography */
   letter-spacing: 0.075em;
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -15,3 +15,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
 }
+
+  a {
+    color: #4630eb;
+  }
