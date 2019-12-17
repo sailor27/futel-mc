@@ -31,11 +31,11 @@ function Home() {
       };
 
       const storageRef = fb.storage.ref();
-      const testsRef = storageRef.child('tests'); // create tests dir in fb
-      const test = testsRef.child(`${data.uid.toString()}`); // create item in tests dir
+      const messagesRef = storageRef.child('messages'); // create messages dir in fb
+      const message = messagesRef.child(`${data.uid.toString()}`); // create item in messages dir
 
-      test.put(data.soundFile).then(() => {
-        console.log(`uploaded ${data.soundFile} to ${test}`);
+      message.put(data.soundFile).then(() => {
+        console.log(`uploaded ${data.soundFile} to futel ${message}s directory`);
       });
     }
   }
