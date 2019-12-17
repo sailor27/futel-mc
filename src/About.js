@@ -71,7 +71,8 @@ function About() {
               Futel Missed Connections
             </span>{' '}
             is a public messaging service presented by Sailor Winkelman in
-            collaboration with Futel for Open Signal's
+            collaboration with <a href="http://futel.net/">Futel</a> for{' '}
+            <a href="https://www.opensignalpdx.org/">Open Signal</a>'s
             <em> Hold the Phone </em> project. Users will be able to record,
             listen to, and reply to missed connections from a public telephone.
           </p>
@@ -138,10 +139,15 @@ function About() {
             Futel Missed Connections was inspired by its text-based counterparts
             and by
             <a href="https://www.google.com/maps/place/The+Wishing+Tree/@45.5445637,-122.6592466,19z/data=!4m5!3m4!1s0x5495a73822599995:0x322a7a12ac77c53a!8m2!3d45.5445211!4d-122.6584831">
-            {' '}The Wishing Tree on 7th Ave
+              {' '}
+              The Wishing Tree on 7th Ave
             </a>
             , located only a few blocks from Open Signal, which invites
             passersby to hand write wishes on tags and hang them from a tree.
+          </p>
+          <p>
+            Another inspiration for Futel Missed Connections is{' '}
+            <a href="https://archive.computerhistory.org/resources/access/text/2019/02/102734414-05-01-acc.pdf"> Community Memory</a>, the first public bulletin board system (BBS), which was originally installed inside of Leopold's Records in Berkeley in 1973. By providing public access to then-scarce computers, Community Memory created an easy way for people in the local community to get in touch.
           </p>
         </div>
 
