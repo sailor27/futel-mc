@@ -1,4 +1,5 @@
 {
+  "homepage": "http://sailor27.github.io/futel-mc",
   "name": "futel-mc",
   "version": "0.1.0",
   "private": true,
@@ -19,7 +20,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**.js"
+    "lint": "eslint src/**.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +39,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  }
 }
