@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/futel-mc/static/css/main.89cf2d7d.chunk.css",
+    "main.js": "/futel-mc/static/js/main.03c689eb.chunk.js",
+    "main.js.map": "/futel-mc/static/js/main.03c689eb.chunk.js.map",
+    "runtime-main.js": "/futel-mc/static/js/runtime-main.d718cc64.js",
+    "runtime-main.js.map": "/futel-mc/static/js/runtime-main.d718cc64.js.map",
+    "static/js/2.6b853d15.chunk.js": "/futel-mc/static/js/2.6b853d15.chunk.js",
+    "static/js/2.6b853d15.chunk.js.map": "/futel-mc/static/js/2.6b853d15.chunk.js.map",
+    "index.html": "/futel-mc/index.html",
+    "precache-manifest.55c5ed17fa1ede7c0d2d19b9f551ceb9.js": "/futel-mc/precache-manifest.55c5ed17fa1ede7c0d2d19b9f551ceb9.js",
+    "service-worker.js": "/futel-mc/service-worker.js",
+    "static/css/main.89cf2d7d.chunk.css.map": "/futel-mc/static/css/main.89cf2d7d.chunk.css.map",
+    "static/js/2.6b853d15.chunk.js.LICENSE": "/futel-mc/static/js/2.6b853d15.chunk.js.LICENSE",
+    "static/media/blue-phone.4a8e6dfc.svg": "/futel-mc/static/media/blue-phone.4a8e6dfc.svg",
+    "static/media/futel_phone_clinton.jpeg": "/futel-mc/static/media/futel_phone_clinton.bc29bb46.jpeg",
+    "static/media/record.png": "/futel-mc/static/media/record.1be78dbc.png",
+    "static/media/triangle.b462f9cd.svg": "/futel-mc/static/media/triangle.b462f9cd.svg",
+    "static/media/wishing_tree.jpeg": "/futel-mc/static/media/wishing_tree.38ba09e6.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d718cc64.js",
+    "static/js/2.6b853d15.chunk.js",
+    "static/css/main.89cf2d7d.chunk.css",
+    "static/js/main.03c689eb.chunk.js"
+  ]
+}
