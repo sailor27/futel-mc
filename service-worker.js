@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/futel-mc/precache-manifest.55c5ed17fa1ede7c0d2d19b9f551ceb9.js"
+  "/futel-mc/precache-manifest.95cf88575dd261b539e72f9ade8d8f44.js"
 );
 
 self.addEventListener('message', (event) => {
