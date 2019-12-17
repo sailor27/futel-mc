@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import WebInstructions from './WebInstructions';
 import * as RecordImg from './img/record.png';
+// import Shapes from './Shapes';
 import {jsx, css} from '@emotion/core';
 
 function HowTo() {
@@ -37,6 +38,7 @@ function HowTo() {
       `}
     >
       <h1>How to Make a Missed Connection</h1>
+      {/* <Shapes/> */}
       <div
         className="row"
         css={{

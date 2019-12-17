@@ -3,8 +3,8 @@ import * as TreeImg from './img/wishing_tree.jpeg';
 import * as PhoneImg from './img/futel_phone_clinton.jpeg';
 import {colors} from './constants/colors';
 import {ReactComponent as PhoneSvg} from './img/blue-phone.svg';
-import {ReactComponent as Triangle} from './img/triangle.svg';
 import {jsx, css} from '@emotion/core';
+// import Shapes from './Shapes';
 
 function About() {
   return (
@@ -58,15 +58,7 @@ function About() {
       `}
     >
       <h1>About Futel Missed Connections</h1>
-      <Triangle
-        css={{
-          maxWidth: `450px`,
-          zIndex: `-1`,
-          position: `fixed`,
-          top: `20px`,
-          filter: `brightness(150%)`,
-        }}
-      />
+      {/* <Shapes/> */}
       <div className="row">
         <div className="content">
           <p>
@@ -157,35 +149,6 @@ function About() {
           <img alt="wishing tree" src={TreeImg} />
         </div>
       </div>
-      <Triangle
-        css={css`
-          @media (max-width: 420px) {
-            display: none;
-          }
-          max-width: 380px;
-          z-index: -1;
-          position: fixed;
-          bottom: 0;
-          right: 0;
-          margin: 60px;
-          filter: brightness(150%);
-          transform: scaleX(-1);
-        `}
-      />
-      <Triangle
-        css={css`
-          @media (max-width: 768px) {
-            display: none;
-          }
-          max-width: 300px;
-          z-index: -1;
-          position: fixed;
-          bottom: 0;
-          left: 0;
-          filter: brightness(150%);
-          transform: scaleX(-1);
-        `}
-      />
     </div>
   );
 }

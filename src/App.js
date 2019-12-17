@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 import About from './About';
 import Home from './Home';
 import HowTo from './HowTo';
+import Shapes from './Shapes';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         }}
       >
         <Nav />
+        <Shapes/>
         <Route exact path={ROUTES.ABOUT} component={About} />
         <Route exact path="/" component={Home} />
         <Route exact path={ROUTES.HOW_TO} component={HowTo} />
