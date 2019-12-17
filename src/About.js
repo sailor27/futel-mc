@@ -4,7 +4,6 @@ import * as PhoneImg from './img/futel_phone_clinton.jpeg';
 import {colors} from './constants/colors';
 import {ReactComponent as PhoneSvg} from './img/blue-phone.svg';
 import {jsx, css} from '@emotion/core';
-// import Shapes from './Shapes';
 
 function About() {
   return (
@@ -58,7 +57,6 @@ function About() {
       `}
     >
       <h1>About Futel Missed Connections</h1>
-      {/* <Shapes/> */}
       <div className="row">
         <div className="content">
           <p>
