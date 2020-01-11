@@ -7,7 +7,7 @@ const WebInstructions = () => (
     <ol>
       <li>
         Visit
-        <a href="/"> this page </a>
+        <a href="/futel-mc/"> this page </a>
         in a web browser.
       </li>
       <li>Click "Record" to start Recording</li>
@@ -20,7 +20,7 @@ const WebInstructions = () => (
     </ol>
 
     <p>
-      Your missed connection will be heard on the Futel phone on 
+      Your missed connection will be heard on the Futel phone on
       <a href="https://g.page/opensignalpdx?share"> NE MLK & Grand </a>
       starting in August.
     </p>
