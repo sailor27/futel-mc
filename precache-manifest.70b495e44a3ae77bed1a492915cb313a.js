@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "10fba8906de1c4f93609e00d0022eb27",
+    "revision": "77be8e7a5d28894d8ac30ab82b4f7382",
     "url": "/futel-mc/index.html"
   },
   {
-    "revision": "e9f0cc2fad5d73e1c58f",
+    "revision": "c241c7659c3dbd9c3118",
     "url": "/futel-mc/static/css/main.89cf2d7d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/futel-mc/static/js/2.a6746715.chunk.js.LICENSE"
   },
   {
-    "revision": "e9f0cc2fad5d73e1c58f",
-    "url": "/futel-mc/static/js/main.796e4de0.chunk.js"
+    "revision": "c241c7659c3dbd9c3118",
+    "url": "/futel-mc/static/js/main.d035d432.chunk.js"
   },
   {
     "revision": "6592e68ba209116695d7",

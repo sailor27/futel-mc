@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/futel-mc/static/css/main.89cf2d7d.chunk.css",
-    "main.js": "/futel-mc/static/js/main.796e4de0.chunk.js",
-    "main.js.map": "/futel-mc/static/js/main.796e4de0.chunk.js.map",
+    "main.js": "/futel-mc/static/js/main.d035d432.chunk.js",
+    "main.js.map": "/futel-mc/static/js/main.d035d432.chunk.js.map",
     "runtime-main.js": "/futel-mc/static/js/runtime-main.d718cc64.js",
     "runtime-main.js.map": "/futel-mc/static/js/runtime-main.d718cc64.js.map",
     "static/js/2.a6746715.chunk.js": "/futel-mc/static/js/2.a6746715.chunk.js",
     "static/js/2.a6746715.chunk.js.map": "/futel-mc/static/js/2.a6746715.chunk.js.map",
     "index.html": "/futel-mc/index.html",
-    "precache-manifest.95cf88575dd261b539e72f9ade8d8f44.js": "/futel-mc/precache-manifest.95cf88575dd261b539e72f9ade8d8f44.js",
+    "precache-manifest.70b495e44a3ae77bed1a492915cb313a.js": "/futel-mc/precache-manifest.70b495e44a3ae77bed1a492915cb313a.js",
     "service-worker.js": "/futel-mc/service-worker.js",
     "static/css/main.89cf2d7d.chunk.css.map": "/futel-mc/static/css/main.89cf2d7d.chunk.css.map",
     "static/js/2.a6746715.chunk.js.LICENSE": "/futel-mc/static/js/2.a6746715.chunk.js.LICENSE",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.d718cc64.js",
     "static/js/2.a6746715.chunk.js",
     "static/css/main.89cf2d7d.chunk.css",
-    "static/js/main.796e4de0.chunk.js"
+    "static/js/main.d035d432.chunk.js"
   ]
 }
